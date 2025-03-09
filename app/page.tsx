@@ -12,7 +12,7 @@ import {
   ExternalLink,
   Code,
   Layers,
-  Sparkles,
+ 
   BookCopy,
 } from "lucide-react";
 
