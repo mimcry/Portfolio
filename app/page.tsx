@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion,} from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Github,
@@ -15,7 +15,7 @@ import {
   Sparkles,
   BookCopy,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+
 import Link from "next/link";
 import Image from "next/image";
 import ProjectCard from "@/components/project-card";
@@ -23,10 +23,10 @@ import SkillBadge from "@/components/skill-badge";
 import ContactForm from "@/components/contact-form";
 import { useInView } from "react-intersection-observer";
 import WorkExperience from "@/components/work-experience";
-import { Toast, Toaster } from "react-hot-toast";
+import {  Toaster } from "react-hot-toast";
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
-  const [menuOpen, setMenuOpen] = useState(false);
+ 
 
   const sections = [
     "home",

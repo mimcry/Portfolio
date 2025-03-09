@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Github, ExternalLink, ArrowLeft, Search, Filter, Code, Layout, Database, Server, Globe } from "lucide-react"
+import { Github, ExternalLink,  Search, Filter, Code, Layout, Database, Server, Globe } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 // Project type definition

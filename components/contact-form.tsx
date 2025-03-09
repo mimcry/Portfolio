@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { Toaster, toast } from "react-hot-toast";
+import {  toast } from "react-hot-toast";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     user_name: "",
@@ -21,35 +21,37 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const form = useRef();
-  const sendEmail = (e) => {
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true)
-    emailjs
-      .sendForm(
-        "service_26ylv57",
-        "template_llc1nth",
-        form.current,
-        "UbhxEDqoO6dxuMe2M"
-      )
-      .then(
-        () => {
-          toast.success("Thank you for reaching out. I'll get back to you as soon as possible.");
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_26ylv57",
+          "template_llc1nth",
+          form.current,
+          "UbhxEDqoO6dxuMe2M"
+        )
+        .then(
+          () => {
+            toast.success("Thank you for reaching out. I'll get back to you as soon as possible.");
 
-          setFormData({
-            user_name: "",
-            user_email: "",
-            email_subject: "",
-            message: "",
-          });
-          form.current.reset();
-          setIsSubmitted(true)
-        },
-        (error) => {
-          console.error("FAILED...", error.text);
-          toast.error("Your email was not sent. ");
-        }
-      );
+            setFormData({
+              user_name: "",
+              user_email: "",
+              email_subject: "",
+              message: "",
+            });
+            form.current?.reset();
+            setIsSubmitted(true)
+          },
+          (error) => {
+            console.error("FAILED...", error.text);
+            toast.error("Your email was not sent. ");
+          }
+        );
+    }
   };
 
   const handleChange = (
@@ -68,7 +70,7 @@ export default function ContactForm() {
       console.log(formData);
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ user_name: "", user_email: "", email_subject: "", message: "" });
 
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -147,7 +149,6 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            onClick={sendEmail}
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-full cursor-pointer"
           >
