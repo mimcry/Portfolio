@@ -61,23 +61,7 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(formData);
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ user_name: "", user_email: "", email_subject: "", message: "" });
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
+ 
 
   return (
     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
@@ -98,7 +82,7 @@ export default function ContactForm() {
           </p>
         </motion.div>
       ) : (
-        <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+        <form ref={form} onSubmit={sendEmail} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <Input
@@ -148,7 +132,7 @@ export default function ContactForm() {
           </div>
 
           <Button
-            onClick={sendEmail}
+            type="submit"
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-full cursor-pointer"
           >
