@@ -25,7 +25,7 @@ import { useInView } from "react-intersection-observer";
 import WorkExperience from "@/components/work-experience";
 import {  Toaster } from "react-hot-toast";
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [, setActiveSection] = useState("home");
  
 
   const sections = [

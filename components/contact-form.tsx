@@ -148,7 +148,7 @@ export default function ContactForm() {
           </div>
 
           <Button
-            type="submit"
+            onClick={()=>sendEmail}
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-full cursor-pointer"
           >
