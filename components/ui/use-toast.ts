@@ -142,7 +142,7 @@ function toast({ ...props }: Toast) {
       ...props,
       id,
       open: true,
-      onOpenChange: (open) => {
+      onOpenChange: (open: any) => {
         if (!open) dismiss()
       },
     },
@@ -176,3 +176,7 @@ function useToast() {
 }
 
 export { useToast, toast }
+function genId() {
+  throw new Error("Function not implemented.")
+}
+
