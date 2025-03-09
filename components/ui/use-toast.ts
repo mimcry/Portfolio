@@ -29,7 +29,7 @@ type Action =
     }
   | {
       type: "DISMISS_TOAST"
-      toastId?: ToasterToast["id"]
+      toastId?: string | void
     }
   | {
       type: "REMOVE_TOAST"
@@ -177,7 +177,7 @@ function useToast() {
 }
 
 export { useToast, toast }
-function genId() {
-  throw new Error("Function not implemented.")
+function genId(): string {
+  return Math.random().toString(36).substr(2, 9);
 }
 
