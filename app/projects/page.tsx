@@ -261,7 +261,7 @@ export default function ProjectsPage() {
               <Search className="h-16 w-16 mx-auto text-gray-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">No projects found</h3>
               <p className="text-gray-400">
-                Try adjusting your search or filter criteria to find what you're looking for.
+                Try adjusting your search or filter criteria to find what you&apos;re looking for.
               </p>
               <Button
                 variant="outline"

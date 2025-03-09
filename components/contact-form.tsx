@@ -93,7 +93,7 @@ export default function ContactForm() {
             Message Sent!
           </h4>
           <p className="text-gray-300">
-            Thank you for reaching out. I'll get back to you as soon as
+            Thank you for reaching out. I&apos;ll get back to you as soon as
             possible.
           </p>
         </motion.div>
@@ -148,7 +148,7 @@ export default function ContactForm() {
           </div>
 
           <Button
-            onClick={()=>sendEmail}
+            onClick={sendEmail}
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white rounded-full cursor-pointer"
           >

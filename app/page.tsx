@@ -162,7 +162,7 @@ export default function Portfolio() {
                     transition={{ delay: 0.2 }}
                     className="text-cyan-400 font-medium"
                   >
-                    Hello, I'm
+                    Hello, I&apos;m
                   </motion.p>
                   <motion.h1
                     initial={{ opacity: 0, y: 20 }}
@@ -183,10 +183,10 @@ export default function Portfolio() {
                   transition={{ delay: 0.5 }}
                   className="text-gray-300 text-lg max-w-lg"
                 >
-                  Hi, I'm Salon Gautam – a Full-Stack Developer from Nepal. I
+                  Hi, I&apos;m Salon Gautam – a Full-Stack Developer from Nepal. I
                   build dynamic web and mobile apps using React.js, Node.js,
-                  Next.js, and React Native. I'm focused on creating seamless,
-                  user-friendly experiences. Let's turn your ideas into reality!{" "}
+                  Next.js, and React Native. I&apos;m focused on creating seamless,
+                  user-friendly experiences. Let&apos;s turn your ideas into reality!{" "}
                 </motion.p>
 
                 <motion.div
@@ -349,7 +349,7 @@ export default function Portfolio() {
               </h3>
 
               <p className="text-gray-300">
-                I'm a passionate **Full-Stack Developer** with 2+ years of
+                I&apos;m a passionate **Full-Stack Developer** with 2+ years of
                 experience in building modern web and mobile applications. I
                 specialize in **React** and its ecosystem, focusing on crafting
                 responsive, user-friendly, and high-performance interfaces.
@@ -357,7 +357,7 @@ export default function Portfolio() {
 
               <p className="text-gray-300">
                 My journey in software development began with a curiosity about
-                how websites and apps function. Over time, I've expanded my
+                how websites and apps function. Over time, I&apos;ve expanded my
                 skills to include both frontend and backend technologies,
                 constantly learning and adapting to deliver seamless digital
                 experiences.
@@ -518,7 +518,7 @@ export default function Portfolio() {
             </h2>
             <div className="mt-4 h-1 w-20 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto"></div>
             <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-              I've worked with a variety of technologies and tools in the web
+              I&apos;ve worked with a variety of technologies and tools in the web
               development ecosystem. Here are some of my key skills and
               proficiencies.
             </p>
@@ -660,9 +660,9 @@ export default function Portfolio() {
             >
               <h3 className="text-2xl font-bold">Contact Information</h3>
               <p className="text-gray-300">
-                I'm currently available for freelance work and full-time
+                I&apos;m currently available for freelance work and full-time
                 positions. If you have a project that needs some creative touch,
-                I'd love to hear about it.
+                I&apos;d love to hear about it.
               </p>
 
               <div className="space-y-4">
