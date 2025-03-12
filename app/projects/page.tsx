@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       description:
         "A food delivery app with a food allergy alert system, built using React Native and Node.js.",
       image: "/foodie.jpg",
-      tags: ["React Native", "Node.js","Express js","Postgres SQL","Redux","RESTFUL APIs"],
+      tags: ["React Native", "Node.js","Express js","PostgreSQL","Redux","RESTFUL APIs"],
       github: "https://github.com/mimcry/Foodie-Mobile-App",
       demo: " ",
     },
