@@ -595,7 +595,7 @@ export default function Portfolio() {
                       "Node.js",
                       "Express",
                       "MongoDB",
-                      "Postges SQL",
+                      "PostgeSQL",
                       "Firebase",
                     ],
                   },
