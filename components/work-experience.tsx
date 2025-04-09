@@ -63,7 +63,6 @@ export default function WorkExperience() {
           "FCM",
           "WebSocket",
           "Redux",
-          "GraphQL",
           "Responsive Design",
           "Performance Optimization"
         ],
