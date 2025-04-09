@@ -41,6 +41,34 @@ export default function WorkExperience() {
           ],          
         skills: ["Next.js", "TypeScript", "Redux", "Graphql", "Responsive Design",  "Performance Optimization"],
       },
+      {
+        title: "Frontend Engineer (Web & Mobile)",
+        company: "Neatly",
+        location: "USA",
+        period: "April 2025 - Present",
+        description: [
+          "Worked with a team to design and develop a Cleaning Management System app for hosts and cleaners, improving task scheduling and real-time updates",
+          "Built responsive web and mobile interfaces using Next.js and React Native with TypeScript for unified cross-platform development",
+          "Integrated Firebase services including Firestore, FCM, and Authentication for real-time data sync and secure user management",
+          "Implemented WebSocket communication to enable live updates on task assignments and cleaning status",
+          "Enhanced UI consistency and responsiveness using TailwindCSS across web and mobile views",
+          "Collaborated with designers and stakeholders to refine UX and boost user engagement for both hosts and cleaners"
+        ],
+        skills: [
+          "Next.js",
+          "React Native",
+          "TypeScript",
+          "TailwindCSS",
+          "Firebase",
+          "FCM",
+          "WebSocket",
+          "Redux",
+          "GraphQL",
+          "Responsive Design",
+          "Performance Optimization"
+        ],
+      }
+      
   
   ]
 
