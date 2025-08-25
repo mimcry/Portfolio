@@ -67,7 +67,32 @@ export default function WorkExperience() {
           "Performance Optimization"
         ],
       }
-      
+      ,{
+  title: "Freelance Next.js Developer",
+  company: "Travel Agency Management System",
+  location: "Remote",
+  period: " July 2025 - Present(Part-time)",
+  description: [
+    "Designed and developed a web-based Travel Agency Management System to streamline package listings, customer bookings, and inquiry handling",
+    "Built responsive and interactive interfaces with Next.js, TypeScript, and TailwindCSS, ensuring seamless usability across devices",
+    "Integrated React Query for efficient server-state management and real-time data fetching",
+    "Implemented authentication and role-based access for admins, agents, and customers",
+    "Optimized SEO and performance to improve discoverability and page load speed",
+    "Worked independently with clients to gather requirements, propose solutions, and deliver features on time"
+  ],
+  skills: [
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "React Query",
+    "Responsive Design",
+    "SEO Optimization",
+    "Authentication",
+    "API Integration",
+    "Client Communication"
+  ],
+}
+
   
   ]
 

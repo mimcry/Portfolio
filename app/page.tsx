@@ -202,7 +202,7 @@ export default function Portfolio() {
                   <Link href={"#contact"}>
                   <Button
                     variant="outline"
-                    className="border-white/20 text-white hover:bg-white/10 rounded-full px-8 cursor-pointer"
+                    className="border-white/20 text-white bg-white/10 rounded-full px-8 cursor-pointer"
                   >
                     Contact Me
                   </Button></Link>
@@ -490,7 +490,7 @@ export default function Portfolio() {
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-white/20 text-white hover:bg-white/10 rounded-full px-8 cursor-pointer"
+                className="border-white/20 text-white bg-white/10 rounded-full px-8 cursor-pointer"
           
               >
                 View All Projects <ExternalLink className="ml-2 h-4 w-4" />
@@ -707,7 +707,7 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40 cursor-pointer"
+                      className="rounded-full border-white/20 text-white bg-white/10 hover:border-white/40 cursor-pointer"
                     >
                       <Github className="h-5 w-5" />
                     </Button>
@@ -720,7 +720,7 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40 cursor-pointer"
+                      className="rounded-full border-white/20 text-white bg-white/10 hover:border-white/40 cursor-pointer"
                     >
                       <Twitter className="h-5 w-5" />
                     </Button>
@@ -733,7 +733,7 @@ export default function Portfolio() {
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full border-white/20 text-white hover:bg-white/10 hover:border-white/40 cursor-pointer"
+                      className="rounded-full border-white/20 text-white bg-white/10 hover:border-white/40 cursor-pointer"
                     >
                       <Linkedin className="h-5 w-5" />
                     </Button>
