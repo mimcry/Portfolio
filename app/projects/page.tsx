@@ -25,71 +25,18 @@ interface Project {
 export default function ProjectsPage() {
   // Sample projects data - in a real app, this would come from a database or API
   const allProjects: Project[] = [
-    {id:1,category:"Full Stack",featured:true,
-      title: "Foodie Mobile App",
-      description:
-        "A food delivery app with a food allergy alert system, built using React Native and Node.js.",
-      image: "/foodie.jpg",
-      tags: ["React Native", "Node.js","Express js","PostgreSQL","Redux","RESTFUL APIs"],
-      github: "https://github.com/mimcry/Foodie-Mobile-App",
-      demo: " ",
+    {
+      id: 1,
+      category: "Full Stack",
+      featured: true,
+      title: "NYC Hilux Limo Service",
+      description: "Premium limousine service platform serving the greater New York City area. Complete booking management system with admin dashboard, driver portal, and customer interface for seamless luxury transportation services.",
+      image: "/limo-service.jpg",
+      tags: ["Next.js", "Django", "PostgreSQL", "Admin Panel", "Driver Portal", "User Portal", "REST APIs", "Full Stack"],
+      github: "https://github.com/mimcry/nyc-hilux-limo-service",
+      demo: "https://nyc-hilux-limo-demo.vercel.app/",
     },
-    {id:1,category:"Full Stack",featured:true,
-      title: "Clothing Store",
-      description:
-        "An online store for clothing items, with a modern user interface and functionality.",
-      image: "/bella.png",
-      tags: ["React", "Node.js","Express js", "Material UI","RESTFUL APIs"],
-      github:
-        "https://github.com/mimcry/Online-Clothing-Store",
-      demo: "https://stunning-chebakia-26098d.netlify.app/",
-    },
-    {id:1,category:"Full Stack",featured:true,
-      title: "Hotel Website",
-      description:
-        "Simple hotel website about booking a room and ordering a food.",
-      image: "/hotel.png",
-      tags: ["React","Node.js","Express js", "Material UI","RESTFUL APIs"],
-      github:
-        "https://github.com/mimcry/Restaurant-hotel",
-      demo: "https://664b30e45b0c79a5a632697d--elaborate-medovik-94140a.netlify.app",
-    },
-
-    {id:1,category:"Full Stack",featured:true,
-      title: "Foodie",
-      description: "Food ordering website where you can place orders and browse the menu.",
-      image: "/foodie.png",
-      tags: ["React", "Django"],
-      github: "https://github.com/mimcry/foodie",
-      demo: " ",
-    },
-    {id:1,category:"Full Stack",featured:true,
-      title: "Swarmnet",
-      description: "Swarmnet is a P2P file sharing system made with the help of Rust and React JS.",
-      image: "/swarmnet.png",
-      tags: ["Rust", "React JS"],
-      github: "https://github.com/imnabid/SwarmNet-peer-to-peer-file-sharing.git",
-      demo: " ",
-    },
-
-    {id:1,category:"Frontend",featured:true,
-      title: "Coinlore API: Tables",
-      description: "Filtering data by Rank, Price, Percentage and also filter data in each column.",
-      image: "/crypto.png",
-      tags: ["React", "API Integration"],
-      github: "https://github.com/mimcry/Data-Visualization-and-Table-Manipulation-using-Coinlore-API",
-      demo: "https://sparkly-ganache-d68682.netlify.app/",
-    },
-
-    {id:1,category:"Full Stack",featured:true,
-      title: "Agri Nepal",
-      description: "Empowering Nepali farmers with market access, real-time prices, and expert advice for a sustainable future.",
-      image: "/agrinepal.png",
-      tags: ["React", "Node.js","Express js", "MongoDB","RESTFUL APIs"],
-      github: "https://github.com/mimcry/Agriculture_Nepal",
-      demo: " ",
-    },
-  ]
+      ]
   const sections = [
     "home",
     "about",

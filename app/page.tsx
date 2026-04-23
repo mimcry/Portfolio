@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion,} from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Github,
@@ -23,7 +23,8 @@ import SkillBadge from "@/components/skill-badge";
 import ContactForm from "@/components/contact-form";
 import { useInView } from "react-intersection-observer";
 import WorkExperience from "@/components/work-experience";
-import {  Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
+
 export default function Portfolio() {
   const [, setActiveSection] = useState("home");
  
@@ -70,38 +71,12 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Foodie Mobile App",
-      description:
-        "A food delivery app with a food allergy alert system, built using React Native and Node.js.",
-      image: "/foodie.jpg",
-      tags: [
-        "React Native",
-        "Node.js",
-        "Express js",
-        "PostgreSQL",
-        "Redux",
-        "RESTFUL APIs",
-      ],
-      github: "https://github.com/mimcry/Foodie-Mobile-App",
-      demo: " ",
-    },
-    {
-      title: "Clothing Store",
-      description:
-        "An online store for clothing items, with a modern user interface and functionality.",
-      image: "/bella.png",
-      tags: ["React", "Node.js", "Express js", "Material UI", "RESTFUL APIs"],
-      github: "https://github.com/mimcry/Online-Clothing-Store",
-      demo: "https://stunning-chebakia-26098d.netlify.app/",
-    },
-    {
-      title: "Hotel Website",
-      description:
-        "Simple hotel website about booking a room and ordering a food.",
-      image: "/hotel.png",
-      tags: ["React", "Node.js", "Express js", "Material UI", "RESTFUL APIs"],
-      github: "https://github.com/mimcry/Restaurant-hotel",
-      demo: "https://664b30e45b0c79a5a632697d--elaborate-medovik-94140a.netlify.app",
+      title: "NYC Hilux Limo Service",
+      description: "Premium limousine service platform serving the greater New York City area. Complete booking management system with admin dashboard, driver portal, and customer interface for seamless luxury transportation services.",
+      image: "/limo-service.jpg",
+      tags: ["Next.js", "Django", "PostgreSQL", "Admin Panel", "Driver Portal", "User Portal", "REST APIs", "Full Stack"],
+      github: "https://github.com/mimcry/nyc-hilux-limo-service",
+      demo: "https://nyc-hilux-limo-demo.vercel.app/",
     },
   ];
 
@@ -110,8 +85,11 @@ export default function Portfolio() {
     { name: "JavaScript", level: 85 },
     { name: "TypeScript", level: 80 },
     { name: "Next.js", level: 85 },
-    { name: "Node.js", level: 50 },
-    { name: "Express.js", level: 75 },
+    { name: "Python", level: 75 },
+    { name: "Django", level: 70 },
+    { name: "FastAPI", level: 65 },
+    { name: "AI Automation", level: 80 },
+    { name: "n8n", level: 75 },
     { name: "CSS/SCSS", level: 80 },
     { name: "Tailwind CSS", level: 90 },
     { name: "Material UI", level: 90 },
@@ -170,9 +148,9 @@ export default function Portfolio() {
                     transition={{ delay: 0.3, duration: 0.5 }}
                     className="text-5xl md:text-7xl font-bold mt-2"
                   >
-                    <span className="block">Full Stack</span>
+                    <span className="block">Software</span>
                     <span className="block mt-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
-                      Developer
+                      Engineer
                     </span>
                   </motion.h1>
                 </div>
@@ -183,7 +161,7 @@ export default function Portfolio() {
                   transition={{ delay: 0.5 }}
                   className="text-gray-300 text-lg max-w-lg"
                 >
-                  Hi, I&apos;m Salon Gautam – a Full-Stack Developer from Nepal. I
+                  Hi, I&apos;m Salon Gautam – a Software Engineer from Nepal. I
                   build dynamic web and mobile apps using React.js, Node.js,
                   Next.js, and React Native. I&apos;m focused on creating seamless,
                   user-friendly experiences. Let&apos;s turn your ideas into reality!{" "}
@@ -345,14 +323,15 @@ export default function Portfolio() {
               className="space-y-6"
             >
               <h3 className="text-2xl font-bold">
-                Full-Stack Developer & AI Enthusiast
+                Software Engineer & AI Enthusiast
               </h3>
 
               <p className="text-gray-300">
-                I&apos;m a passionate **Full-Stack Developer** with 2+ years of
+                I&apos;m a passionate **Software Engineer** with 2+ years of
                 experience in building modern web and mobile applications. I
-                specialize in **React** and its ecosystem, focusing on crafting
-                responsive, user-friendly, and high-performance interfaces.
+                work across the entire technology stack - from **frontend** interfaces
+                and **backend** systems to **n8n automation** workflows, creating
+                comprehensive solutions that connect and streamline every part of the development process.
               </p>
 
               <p className="text-gray-300">
@@ -451,51 +430,217 @@ export default function Portfolio() {
       <section
         id="projects"
         ref={projectsRef}
-        className="py-20 bg-gradient-to-b from-transparent to-black/30"
+        className="py-20 relative overflow-hidden"
       >
-        <div className="container mx-auto px-4">
+        {/* Background Effects */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-5xl font-bold">
-              My{" "}
-              <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-transparent bg-clip-text">
-                Projects
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="inline-block"
+            >
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
+                Featured Showcase
               </span>
-            </h2>
-            <div className="mt-4 h-1 w-20 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto"></div>
-            <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-              Here are some of my recent projects. Each project is built with a
-              focus on performance, accessibility, and user experience.
-            </p>
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-6xl font-bold mt-6 mb-4"
+            >
+              My{" "}
+              <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Signature Project
+              </span>
+            </motion.h2>
+            
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "200px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"
+            ></motion.div>
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="mt-8 text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed"
+            >
+              A comprehensive full-stack solution showcasing advanced development capabilities, 
+              automation workflows, and enterprise-grade architecture. This project demonstrates 
+              my expertise in building scalable, user-centric platforms with cutting-edge technologies.
+            </motion.p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} index={index} />
-            ))}
-          </div>
-
+          {/* Main Project Showcase */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="max-w-7xl mx-auto"
           >
-            <Link href="/projects">
-              <Button
-                variant="outline"
-                className="border-white/20 text-white bg-white/10 rounded-full px-8 cursor-pointer"
-          
-              >
-                View All Projects <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="group relative">
+              {/* Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              
+              <div className="relative bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden">
+                {/* Project Header */}
+                <div className="relative h-96 md:h-[500px] overflow-hidden">
+                  <Image
+                    src="/hero.png"
+                    alt="NYC Hilux Limo Service"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                  />
+                  
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                  
+                  {/* Floating Badge */}
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className="absolute top-6 left-6"
+                  >
+                    <span className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-full text-sm font-semibold shadow-lg">
+                      🚀 Featured Project
+                    </span>
+                  </motion.div>
+
+                  {/* Title Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                    <motion.h3
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
+                      viewport={{ once: true }}
+                      className="text-3xl md:text-5xl font-bold text-white mb-4"
+                    >
+                      NYC Hilux Limo Service
+                    </motion.h3>
+                    
+                    <motion.p
+                      initial={{ y: 20, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className="text-gray-200 text-lg max-w-2xl"
+                    >
+                      Premium limousine service platform with comprehensive booking management and automation workflows
+                    </motion.p>
+                  </div>
+                </div>
+
+                {/* Project Content */}
+                <div className="p-8 md:p-12">
+                  {/* Interactive Gallery */}
+                 
+
+                  {/* Features Grid */}
+                  <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    <motion.div
+                      initial={{ x: -20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 1.0 }}
+                      viewport={{ once: true }}
+                    >
+                      <h4 className="text-xl font-bold text-cyan-400 mb-4">Core Features</h4>
+                      <div className="space-y-3">
+                        {[
+                          "Real-time booking management",
+                          "Admin dashboard & analytics",
+                          "Driver portal & route optimization",
+                          "Customer interface & payments"
+                        ].map((feature, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ x: -10, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.3, delay: 1.1 + index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="flex items-center gap-3"
+                          >
+                            <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full"></div>
+                            <span className="text-gray-300">{feature}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ x: 20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 1.0 }}
+                      viewport={{ once: true }}
+                    >
+                      <h4 className="text-xl font-bold text-cyan-400 mb-4">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {["Next.js", "Django", "PostgreSQL", "n8n", "REST APIs", "Full Stack"].map((tech, index) => (
+                          <motion.span
+                            key={index}
+                            initial={{ scale: 0, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.3, delay: 1.1 + index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="px-3 py-1.5 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-cyan-300 rounded-lg text-sm font-medium"
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Call to Action */}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 1.3 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                  >
+                    <a
+                      href="https://nyc-hilux-limo-demo.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                      View Live Demo
+                      <motion.div
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        →
+                      </motion.div>
+                    </a>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -592,12 +737,16 @@ export default function Portfolio() {
                   {
                     category: "Backend",
                     items: [
-                      "Node.js",
-                      "Express",
+                      "Python",
+                      "Django",
+                      "FastAPI",
                       "MongoDB",
-                      "PostgeSQL",
-                      "Firebase",
+                      "PostgreSQL",
                     ],
+                  },
+                  {
+                    category: "AI & Automation",
+                    items: ["AI Automation", "n8n", "Workflow Integration", "API Automation"],
                   },
                   {
                     category: "Tools",

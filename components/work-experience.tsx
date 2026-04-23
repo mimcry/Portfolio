@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Briefcase, Calendar, MapPin } from "lucide-react"
+import { Briefcase, Calendar, MapPin, ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 interface ExperienceItem {
@@ -11,6 +11,8 @@ interface ExperienceItem {
   period: string
   description: string[]
   skills: string[]
+  projectLink?: string
+  projectLink2?: string
 }
 
 export default function WorkExperience() {
@@ -66,6 +68,7 @@ export default function WorkExperience() {
           "Responsive Design",
           "Performance Optimization"
         ],
+        projectLink: "https://neatlyhost.com/",
       }
       ,{
   title: "Freelance Next.js Developer",
@@ -91,6 +94,34 @@ export default function WorkExperience() {
     "API Integration",
     "Client Communication"
   ],
+  projectLink: "https://www.dmclounge.ai/",
+},
+    {
+  title: "Full Stack Developer (AI & Automation)",
+  company: "Neural Codex",
+  location: "Remote",
+  period: "March 2025 - Present",
+  description: [
+    "Developed intelligent AI agents using n8n workflow automation for seamless data processing and task automation",
+    "Built full-stack applications connecting frontend React interfaces with backend Node.js systems through n8n workflows",
+    "Implemented automated workflows that integrate with multiple APIs and services for end-to-end business process automation",
+    "Created responsive frontend dashboards for monitoring and managing AI agent performance and workflow execution",
+    "Designed and deployed scalable backend systems to support real-time data processing and agent communication",
+    "Integrated AI automation solutions with existing client systems to improve efficiency and reduce manual workload"
+  ],
+  skills: [
+    "n8n Workflow Automation",
+    "AI Agent Development",
+    "React",
+    "Node.js",
+    "Full Stack Development",
+    "API Integration",
+    "Workflow Design",
+    "Process Automation",
+    "Real-time Systems",
+    "REST APIs"
+  ],
+  projectLink: "https://life-science-ai-self.vercel.app/",
 }
 
   
@@ -166,6 +197,32 @@ export default function WorkExperience() {
                             </span>
                           ))}
                         </div>
+                        {(exp.projectLink || exp.projectLink2) && (
+                          <div className="mt-4 flex flex-wrap gap-3">
+                            {exp.projectLink && (
+                              <a
+                                href={exp.projectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-[#00abf0] hover:bg-[#0090d0] text-white px-4 py-2 rounded-lg text-sm transition-colors"
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                                {exp.company === "Neatly" ? "Neatly" : exp.company === "Travel Agency Management System" ? "DMC" : "Life Science AI"}
+                              </a>
+                            )}
+                            {exp.projectLink2 && (
+                              <a
+                                href={exp.projectLink2}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                                DMC
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </CardContent>
                     </Card>
                   </div>
