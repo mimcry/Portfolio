@@ -18,7 +18,6 @@ import {
 
 import Link from "next/link";
 import Image from "next/image";
-import ProjectCard from "@/components/project-card";
 import SkillBadge from "@/components/skill-badge";
 import ContactForm from "@/components/contact-form";
 import { useInView } from "react-intersection-observer";
@@ -69,16 +68,6 @@ export default function Portfolio() {
     contactInView,
   ]);
 
-  const projects = [
-    {
-      title: "NYC Hilux Limo Service",
-      description: "Premium limousine service platform serving the greater New York City area. Complete booking management system with admin dashboard, driver portal, and customer interface for seamless luxury transportation services.",
-      image: "/limo-service.jpg",
-      tags: ["Next.js", "Django", "PostgreSQL", "Admin Panel", "Driver Portal", "User Portal", "REST APIs", "Full Stack"],
-      github: "https://github.com/mimcry/nyc-hilux-limo-service",
-      demo: "https://nyc-hilux-limo-demo.vercel.app/",
-    },
-  ];
 
   const skills = [
     { name: "React", level: 90 },
